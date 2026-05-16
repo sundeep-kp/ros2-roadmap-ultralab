@@ -1,0 +1,5 @@
+<launch>
+<arg name = "run_listener" default = "true"/>
+<node pkg = "demo_nodes_cpp" exec = "talker"  name ="talker_node"/>
+<node if="$(var run_listener)" pkg = "demo_nodes_cpp" exec = "listener" name = "listener_node"/>
+</launch>

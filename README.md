@@ -1,228 +1,27 @@
-# Husarion ROS2 Learning Progress
+****#walkthrough****
 
-Repository: ros2-roadmap-ultralab
-Goal: Track applied ROS2 system understanding using Husarion tutorials with ros2 docs for reference . 
 
----
+- after following through the initial setup, all i had to do was source ros (default /opt/ros/humble/setup.bash)and source install/setup.bash of my current workspace (which was the rosbot_ws). and then I ran ROSBOT_SIM command which opened up a gazebo + rviz simulation window.
 
-# 1. ROS2 Introduction
+**writing my first packages**
+- i created a new workspace called practice_ws. then a created a launch file example.launch.py to launch a listerner and talker node at the same time
+- now i asked gpt to explain me the code and now attempted to write the code launch the demo talker and listener in a launch file myself using 1. python , 2. xml (in practicality you can use either one) 3. yaml
+    - **python**
+        DeclareLaunchArgument as the name suggests is used to declare a argument i.e parameter for the launch file and set its default value
 
-## Concepts
+        the Node function calls a node with the parameters -- package , executable, a custom name that you get to decide and optionally a condition to call the node (e.g the launch argument like run_listener_arg) 
 
-* [ ] ROS2 architecture overview
-* [ ] Nodes
-* [ ] Topics
-* [ ] Publishers vs Subscribers
-* [ ] ROS2 workspace structure
-* [ ] Packages and dependencies
+        LaunchConfigurationEquals basically allows you to check condition. e.g condition=LaunchConfigurationEquals("run_listener","true")\
+        
+        at the end we return LaunchDescription([run_listener_arg, talker_node, listener_node])
+        which kind of makes sense that LaunchDescription is probably a function receives the output from talker_node and listerner_node, and accepts the launch argument run_listener_arg as paramater. But i haven't quite digested it yet
 
-## Practical
+    - **xml**
 
-* [ ] Install and configure ROS2 workspace
-* [ ] Run demo nodes
-* [ ] Inspect nodes with `ros2 node list`
-* [ ] Inspect topics with `ros2 topic list`
-* [ ] Echo topic data
+        its simple. its made of argument tag and node tags(option if condition, pkg, exec, name) enclosed inside of <launch> and </launch>
+        imp stuff -
+        no commas, separation using space only
 
-## Understanding Check
+    - **yaml** 
 
-* [ ] Explain ROS graph architecture
-* [ ] Explain publish–subscribe model
-
----
-
-# 2. Creating Nodes and Messages
-
-## Concepts
-
-* [ ] ROS2 node lifecycle
-* [ ] Message types
-* [ ] Custom messages
-
-## Practical
-
-* [ ] Create Python ROS2 package
-* [ ] Create first node
-* [ ] Implement publisher node
-* [ ] Implement subscriber node
-* [ ] Create custom message type
-* [ ] Build workspace with `colcon`
-
-## Understanding Check
-
-* [ ] Explain message serialization
-* [ ] Explain topic data flow
-
----
-
-# 3. Creating Nodes with Services
-
-## Concepts
-
-* [ ] Services vs topics
-* [ ] Request–response model
-
-## Practical
-
-* [ ] Create service node
-* [ ] Create service client
-* [ ] Test service interaction
-* [ ] Inspect services with CLI tools
-
-## Understanding Check
-
-* [ ] Explain when to use services instead of topics
-
----
-
-# 4. Kinematics and Visualization
-
-## Concepts
-
-* [ ] Differential drive kinematics
-* [ ] Robot motion equations
-* [ ] Robot coordinate frames
-
-## Practical
-
-* [ ] Visualize robot model in RViz
-* [ ] Run robot simulation
-* [ ] Observe odometry output
-
-## Understanding Check
-
-* [ ] Explain how wheel velocity translates to robot motion
-
----
-
-# 5. OpenCV Tracking
-
-## Concepts
-
-* [ ] Image processing in robotics
-* [ ] Camera data streams
-* [ ] Object tracking basics
-
-## Practical
-
-* [ ] Subscribe to camera image topic
-* [ ] Process image with OpenCV
-* [ ] Implement object tracking
-* [ ] Publish tracking result
-
-## Understanding Check
-
-* [ ] Explain camera → perception → control pipeline
-
----
-
-# 6. Robot Network
-
-## Concepts
-
-* [ ] ROS2 distributed system model
-* [ ] DDS discovery
-* [ ] Multi-machine communication
-
-## Practical
-
-* [ ] Configure ROS domain ID
-* [ ] Connect multiple machines
-* [ ] Test node communication across network
-
-## Understanding Check
-
-* [ ] Explain DDS discovery process
-
----
-
-# 7. Transformations
-
-## Concepts
-
-* [ ] Coordinate frames
-* [ ] TF tree
-* [ ] Static vs dynamic transforms
-
-## Practical
-
-* [ ] Inspect TF tree
-* [ ] Publish transform
-* [ ] Visualize transforms in RViz
-
-## Understanding Check
-
-* [ ] Explain how robot coordinate frames relate
-
----
-
-# 8. SLAM
-
-## Concepts
-
-* [ ] Simultaneous Localization and Mapping
-* [ ] Occupancy grid maps
-* [ ] Sensor fusion
-
-## Practical
-
-* [ ] Launch SLAM system
-* [ ] Generate map in simulation
-* [ ] Save map
-
-## Understanding Check
-
-* [ ] Explain how SLAM builds a map
-
----
-
-# 9. Navigation
-
-## Concepts
-
-* [ ] Navigation stack architecture
-* [ ] Path planning
-* [ ] Costmaps
-
-## Practical
-
-* [ ] Launch Nav2
-* [ ] Load map
-* [ ] Send navigation goal
-* [ ] Observe path planning
-
-## Understanding Check
-
-* [ ] Explain global vs local planner
-
----
-
-# 10. Exploration
-
-## Concepts
-
-* [ ] Autonomous exploration
-* [ ] Frontier detection
-* [ ] Exploration strategies
-
-## Practical
-
-* [ ] Launch exploration node
-* [ ] Observe autonomous map expansion
-
-## Understanding Check
-
-* [ ] Explain frontier-based exploration
-
----
-
-# Reflection
-
-After each tutorial:
-
-* [ ] What worked
-* [ ] What broke
-* [ ] Key insight learned
-* [ ] Questions for deeper research
-
----
+        it takes more lines of code than xml but def looks pretty. similar abbreviations as xml thingy
