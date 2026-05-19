@@ -32,10 +32,8 @@
 
 
 **ROSBOT_SIM**
-    - encountered a issue where camera node and topic did not exist (therefore /camera doesn't show in rviz2 aswell)however the rest of the simulation worked . did''' sudo apt install ros-humble-gazebo-ros-pkgs ros-humble-gazebo-plugins ''' to eliminate the possibility of missing packages (suggested by gpt). eventually I put out a issue on https://community.husarion.com/t/rosbot-xl-simulation-camera-issue/2199 , apparently the naming convention on the document was outdated. its under /oak not camera, however as adviced by husarion team, i had to use the argument configuration:=autonomy which the alias ROBOT_SIM did not include by default. fixed that by editing ~/.bashrc alias line to 
-```
-alias ROSBOT_SIM='ros2 launch rosbot_gazebo simulation.launch.py robot_model:=rosbot_xl configuration:=autonomy' 
-```
+    - encountered a issue where camera node and topic did not exist (therefore /camera doesn't show in rviz2 aswell)however the rest of the simulation worked . did ```sudo apt install ros-humble-gazebo-ros-pkgs ros-humble-gazebo-plugins ``` to eliminate the possibility of missing packages (suggested by gpt). eventually I put out a issue on https://community.husarion.com/t/rosbot-xl-simulation-camera-issue/2199 , apparently the naming convention on the document was outdated. its under /oak not camera, however as adviced by husarion team, i had to use the argument configuration:=autonomy which the alias ROBOT_SIM did not include by default. fixed that by editing ~/.bashrc alias line to 
+```alias ROSBOT_SIM='ros2 launch rosbot_gazebo simulation.launch.py robot_model:=rosbot_xl configuration:=autonomy' ```
 in nano and resourcing ~/.bashrc
 
     then the doc told to set the reliability policy to best effort (send message without receiving guarantee) instead of reliable (send message until receiving) for better latency i suppose
