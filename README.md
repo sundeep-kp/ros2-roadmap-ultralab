@@ -42,7 +42,7 @@ alias ROSBOT_SIM='ros2 launch rosbot_gazebo simulation.launch.py robot_model:=ro
 
 in nano and resourcing ~/.bashrc
 
-    then the doc told to set the reliability policy to best effort (send message without receiving guarantee) instead of reliable (send message until receiving) for better latency i suppose
+then the doc told to set the reliability policy to best effort (send message without receiving guarantee) instead of reliable (send message until receiving) for better latency i suppose
 
  
 ---
