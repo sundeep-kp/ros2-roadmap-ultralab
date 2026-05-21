@@ -252,4 +252,69 @@ ros2-roadmap-ultralab/ros2-roadmap-ultralab/workspaces/ros2_ws$ ros2 run tutoria
 
 now some interesting shit will happen
 
-*We will use our camera to calculate the average brightness of the received image*
+**We will use our camera to calculate the average brightness of the received image**
+
+After shitting my panting at looking at the code for the first time, I decided to learn the c++ fundamentals that make up this piece of code --(using gpt)
+
+1. Namespace = just grouping names
+
+A namespace only organizes code and avoids name collisions.
+
+```
+
+namespace math
+{
+    int add(int a, int b)
+    {
+        return a + b;
+    }
+}
+
+```
+
+this can be called like math::add(2,3)
+
+
+*difference between namespace and class*
+
+```
+
+class Dog
+{
+public:
+    void bark()
+    {
+        std::cout << "Woof";
+    }
+};
+
+```
+
+This is not merely organization.
+
+It defines:
+
+behavior
+data
+objects
+
+now
+
+```
+
+Dog d1;
+Dog d2;
+
+```
+
+are two separate objects each with their own memory allocations done independlty
+
+so practically namespace is kinda equivalent to using only one single class object (kinda, for most
+ practical uses as far as i understand)
+
+
+```
+
+**using namespace std;**
+
+```
