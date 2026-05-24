@@ -1,8 +1,35 @@
 # **walkthrough**
 
-I have put the initial intro stuff here in the readme and the rest in notes folder --
+>I have put the initial intro stuff here in the readme and the rest in notes folder --
 
-btw I made the notes myself , I have mentioned explicitly if I used ai in any particular line, the rest is handwritten based on whatever I understood
+>btw I made the notes myself , I have mentioned explicitly if I used ai in any particular line, the rest is handwritten based on whatever I understood with **no AI**
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <circle cx="16" cy="16" r="12"
+          fill="none"
+          stroke="#d40000"
+          stroke-width="2.5"/>
+
+  <line x1="8" y1="8" x2="24" y2="24"
+        stroke="#d40000"
+        stroke-width="2.5"
+        stroke-linecap="round"/>
+
+  <text x="16" y="20"
+        font-family="Arial,sans-serif"
+        font-size="8"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#d40000">AI</text>
+</svg>
+
+>also I am learning formatting for markdown files and github in general simulataneouly through a course here : - https://www.udemy.com/course/git-and-github-master-class/learn/lecture/52518833#overview
+
+<br/>
+<br/>
+<br/>
+
+>This repository contains all the notes on everything i learnt, all the problems i faced, all the concepts i had to learn separately including but not limited to *****c++ and object oriented programming fundamentals, parts of os fundamentals (especially threads)***
+# Intro
 
 *ROS 2 is a middleware based on a strongly-typed, anonymous publish/subscribe mechanism that allows for message passing between different processes* ~ros2 humble docs
 

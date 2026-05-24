@@ -1,4 +1,4 @@
-#include "rclcpp/rclcpp.hpp" //.hpp is the extnsion for header files in cpp
+#include "rclcpp/rclcpp.hpp" //.hpp is the extnsion for header files in cpp; rcl meand ros client library
 
 class MyNode : public rclcpp::Node
 {
