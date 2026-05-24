@@ -1,5 +1,7 @@
 If you wanna contribute to this repository:
 
+>Do NOT use generative AI for contribution unless you are absolutely sure it did not f up. Use it on no more than a particular small section. Explictly mention the use of AI. non-compliance will lead to ban
+
 1. you may help with the formatting using # or ## for headings, > for notes, code between two sets of ```  above and below the code, and adequate spacing
 
 

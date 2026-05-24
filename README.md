@@ -16,7 +16,7 @@
 
 **How to use this repository**--
 
-Follow the instructions in Husarion docs and further the resources in the projects sections and use the walkthroughs as reference when you get stuck. Do read the topic in the doc after you briefly complete it in husarion docs/ project resource , you might get some additional info about the topic 
+Follow the instructions in Husarion docs(use dark mode like a normal person-- top right corner) and further the resources in the projects sections and use the walkthroughs as reference when you get stuck. Do read the topic in the doc after you briefly complete it in husarion docs/ project resource , you might get some additional info about the topic 
 # [ROS 2 Introduction](https://husarion.com/tutorials/ros2-tutorials/1-ros2-introduction/)
 
 *ROS 2 is a middleware based on a strongly-typed, anonymous publish/subscribe mechanism that allows for message passing between different processes* ~ros2 humble docs
@@ -30,6 +30,9 @@ Follow the instructions in Husarion docs and further the resources in the projec
 
 >[practice_ws](/ros2-roadmap-ultralab/workspaces/practice_ws/) -- visit this for the actual code and details. the following is my brief understanding of the code and the problems i encountered 
 
+### Launch files
+
+*to launch multiple nodes i.e programs at once*
 - i created a new workspace called practice_ws. then a created a launch file example.launch.py to launch a listerner and talker node at the same time
 - now i asked gpt to explain me the code and now attempted to write the code launch the demo talker and listener in a launch file myself using 1. python , 2. xml,  3. yaml (in practicality you can use either one)
     - **python**
@@ -96,7 +99,7 @@ then the doc told to set the reliability policy to **best effort** (send message
  
 ---
 
- ## **how to send information between nodes using messages**
+ ### **creating packages**
 
  In ROS 2, nodes are organized into packages, so in order to create a node, you need to create a package using ros2 pkg create command inside of src follder of workspace (I'm using workspaces;ros2_ws/src) .
 
