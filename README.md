@@ -13,14 +13,21 @@
 <br/>
 
 >This repository contains all the notes on everything i learnt, all the problems i faced, all the concepts i had to learn separately including but not limited to ***c++ and object oriented programming fundamentals, parts of os fundamentals (especially threads)***
-# Intro
+
+**How to use this repository**--
+
+Follow the instructions in Husarion docs and further the resources in the projects sections and use the walkthroughs as reference when you get stuck. Do read the topic in the doc after you briefly complete it in husarion docs/ project resource , you might get some additional info about the topic 
+# [ROS 2 Introduction](https://husarion.com/tutorials/ros2-tutorials/1-ros2-introduction/)
 
 *ROS 2 is a middleware based on a strongly-typed, anonymous publish/subscribe mechanism that allows for message passing between different processes* ~ros2 humble docs
 
 
 - after following through the initial setup, all i had to do was source ros (default /opt/ros/humble/setup.bash)and source install/setup.bash of my current workspace (which was the rosbot_ws). and then I ran ROSBOT_SIM command which opened up a gazebo + rviz simulation window.
 
-**writing my first packages**
+## **writing my first packages**
+
+>https://husarion.com/tutorials/ros2-tutorials/1-ros2-introduction/ 
+
 >[practice_ws](/ros2-roadmap-ultralab/workspaces/practice_ws/) -- visit this for the actual code and details. the following is my brief understanding of the code and the problems i encountered 
 
 - i created a new workspace called practice_ws. then a created a launch file example.launch.py to launch a listerner and talker node at the same time
@@ -164,12 +171,15 @@ vehicle_model_node
 )
 
 ---
-Further--
+Further-- 
+
+[Unit 2:](https://husarion.com/tutorials/ros2-tutorials/2-creating-nodes-messages/){
 
 [1.Making a node](notes/1.Making%20a%20node.md)
 
 [2.Creating a subscriber](notes/2.Creating%20a%20subscriber.md)
 
+}
 
 
 
