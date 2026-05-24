@@ -2,25 +2,7 @@
 
 >I have put the initial intro stuff here in the readme and the rest in notes folder --
 
->btw I made the notes myself , I have mentioned explicitly if I used ai in any particular line, the rest is handwritten based on whatever I understood with **no AI**
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <circle cx="16" cy="16" r="12"
-          fill="none"
-          stroke="#d40000"
-          stroke-width="2.5"/>
-
-  <line x1="8" y1="8" x2="24" y2="24"
-        stroke="#d40000"
-        stroke-width="2.5"
-        stroke-linecap="round"/>
-
-  <text x="16" y="20"
-        font-family="Arial,sans-serif"
-        font-size="8"
-        font-weight="bold"
-        text-anchor="middle"
-        fill="#d40000">AI</text>
-</svg>
+>btw I made the notes myself , I have mentioned explicitly if I used ai in any particular line, the rest is handwritten based on whatever I understood with **no AI**  <img src="image.png" width="18">
 
 >also I am learning formatting for markdown files and github in general simulataneouly through a course here : - https://www.udemy.com/course/git-and-github-master-class/learn/lecture/52518833#overview
 
@@ -28,7 +10,7 @@
 <br/>
 <br/>
 
->This repository contains all the notes on everything i learnt, all the problems i faced, all the concepts i had to learn separately including but not limited to *****c++ and object oriented programming fundamentals, parts of os fundamentals (especially threads)***
+>This repository contains all the notes on everything i learnt, all the problems i faced, all the concepts i had to learn separately including but not limited to ***c++ and object oriented programming fundamentals, parts of os fundamentals (especially threads)***
 # Intro
 
 *ROS 2 is a middleware based on a strongly-typed, anonymous publish/subscribe mechanism that allows for message passing between different processes* ~ros2 humble docs
@@ -37,18 +19,29 @@
 - after following through the initial setup, all i had to do was source ros (default /opt/ros/humble/setup.bash)and source install/setup.bash of my current workspace (which was the rosbot_ws). and then I ran ROSBOT_SIM command which opened up a gazebo + rviz simulation window.
 
 **writing my first packages**
+>[practice_ws](/ros2-roadmap-ultralab/workspaces/practice_ws/) -- visit this for the actual code and details. the following is my brief understanding of the code and the problems i encountered 
+
 - i created a new workspace called practice_ws. then a created a launch file example.launch.py to launch a listerner and talker node at the same time
-- now i asked gpt to explain me the code and now attempted to write the code launch the demo talker and listener in a launch file myself using 1. python , 2. xml (in practicality you can use either one) 3. yaml
+- now i asked gpt to explain me the code and now attempted to write the code launch the demo talker and listener in a launch file myself using 1. python , 2. xml,  3. yaml (in practicality you can use either one)
     - **python**
 
-        DeclareLaunchArgument as the name suggests is used to declare a argument i.e parameter for the launch file and set its default value
+        **DeclareLaunchArgument** as the name suggests is used to declare a argument i.e parameter for the launch file and set its default value
 
-        the Node function calls a node with the parameters -- package , executable, a custom name that you get to decide and optionally a condition to call the node (e.g the launch argument like run_listener_arg) 
+        the **Node function** calls a node with the parameters -- package , executable, a custom name that you get to decide and optionally a *condition* to call the node (e.g the launch argument like run_listener_arg) 
 
-        LaunchConfigurationEquals basically allows you to check condition. e.g condition=LaunchConfigurationEquals("run_listener","true")\
+        **LaunchConfigurationEquals** basically allows you to check condition. e.g
+        ```
+        condition=LaunchConfigurationEquals("run_listener","true")
+        ```
+        at the end we return
+        ```
+         LaunchDescription([run_listener_arg, talker_node, listener_node])
+        ```
+        which kind of makes sense that 
         
-        at the end we return LaunchDescription([run_listener_arg, talker_node, listener_node])
-        which kind of makes sense that LaunchDescription is probably a function receives the output from talker_node and listerner_node, and accepts the launch argument run_listener_arg as paramater. But i haven't quite digested it yet
+        LaunchDescription is probably a function receives the output from talker_node and listerner_node, and accepts the launch argument run_listener_arg as paramater. 
+        
+        But i haven't quite digested it yet
 
     - **xml**
 
@@ -61,29 +54,48 @@
         it takes more lines of code than xml but def looks pretty. similar abbreviations as xml thingy
 
     **examining**
-        learnt about ros2 node/topic list/info, rqt_graph (use the refresh button if nodes don't appear )
 
+        Here I learnt about ros2 node/topic list/info, rqt_graph (use the refresh button if nodes don't appear )
+    
 
 **ROSBOT_SIM**
-    - encountered a issue where camera node and topic did not exist (therefore /camera doesn't show in rviz2 aswell)however the rest of the simulation worked . did 
-    ```sudo apt install ros-humble-gazebo-ros-pkgs ros-humble-gazebo-plugins ``` 
-    to eliminate the possibility of missing packages (suggested by gpt). eventually I put out a issue on https://community.husarion.com/t/rosbot-xl-simulation-camera-issue/2199 , apparently the naming convention on the document was outdated. its under /oak not camera, however as adviced by husarion team, i had to use the argument configuration:=autonomy which the alias ROBOT_SIM did not include by default. fixed that by editing ~/.bashrc alias line to 
+
+ - encountered a issue where camera node and topic did not exist (therefore /camera doesn't show in rviz2 aswell)however the rest of the simulation worked .
+    
+    I did 
+
+```
+    sudo apt install ros-humble-gazebo-ros-pkgs ros-humble-gazebo-plugins
+```
+
+to eliminate the possibility of missing packages (suggested by gpt). eventually I put out a issue on https://community.husarion.com/t/rosbot-xl-simulation-camera-issue/2199 , 
+
+apparently the naming convention on the document was outdated.
+
+ its under /oak not camera, however as adviced by husarion team, i had to use the argument **configuration:=autonomy** which the alias ROBOT_SIM did not include by default. 
+ 
+ fixed that by editing ~/.bashrc alias line to 
 
 ```
 alias ROSBOT_SIM='ros2 launch rosbot_gazebo simulation.launch.py robot_model:=rosbot_xl configuration:=autonomy' 
 ```
 
-in nano and resourcing ~/.bashrc
+in nano and re-sourcing ~/.bashrc
 
-then the doc told to set the reliability policy to best effort (send message without receiving guarantee) instead of reliable (send message until receiving) for better latency i suppose
+then the doc told to set the reliability policy to **best effort** (send message without receiving guarantee) instead of reliable (send message until receiving) for better latency i suppose
 
  
 ---
 
- **how to send information between nodes using messages**
+ ## **how to send information between nodes using messages**
 
  In ROS 2, nodes are organized into packages, so in order to create a node, you need to create a package using ros2 pkg create command inside of src follder of workspace (I'm using workspaces;ros2_ws/src) .
- ```ros2 pkg create package_name --build-type ament_cmake --dependencies <dependencies>``` (syntax; ament_cmake: default build type in ros2, all arguments like buildtype and dependencies are optional)
+
+ ```
+ ros2 pkg create package_name --build-type ament_cmake --dependencies <dependencies>
+ ``` 
+ 
+ (syntax; ament_cmake: default build type in ros2, all arguments like buildtype and dependencies are optional)
 
  now i'll create an example package: 
 
@@ -105,16 +117,20 @@ ros2_ws/
 
 ```
 
-now CMakeLists is used for build instructions,
+- now CMakeLists is used for build instructions,
 
-include dir is for header files(declarations of functions, classes, or other code elements that are used in your source code but are defined in other source files)
+    include dir is for header files(declarations of functions, classes, or other code elements that are used in your source code but are defined in other source files)
 
-package.xml (optional, mainly to deal with legal shit) is used for metadata
+- package.xml (optional, mainly to deal with legal shit) is used for metadata
 
-src toh pata hi hai , its for the main source code to be later built
+src toh pata hi hai (*translation: I know what src is for*) , its for the main source code to be later built
 
 
-TO recap : now we have a workspace called ros2_ws(literally just a folder named ros2_ws that we manually created), which has the source code of the packages(collection of nodes: "simplest program possible responsbile for controlling one particular thing usually") inside a folder called src . Now we created the package called tutorial_pkg inside of src. the package is a folder (called tutorial_pkg ) which has another folder called src for the actual source code of the node(s).
+>TO recap : now we have a workspace called ros2_ws(literally just a folder named ros2_ws that we manually created),
+
+> which has the source code of the packages(collection of nodes: "simplest program possible responsbile for controlling one particular thing usually") inside a folder called src .
+ 
+ >Now we created the package called tutorial_pkg inside of src. the package is a folder (called tutorial_pkg ) which has another folder called src for the actual source code of the node(s).
 
 I guess the reason we do this is to make separate collection of nodes(packages) to be used separately as needed. all these related packages are stored inside a workspace. like workspace car/ can contain packages --
 
