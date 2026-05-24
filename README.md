@@ -1,5 +1,7 @@
 # **walkthrough**
 
+>If you're too following this walkthrough, you may fork this branch, I'll add a link to your repository in the readme
+
 >I have put the initial intro stuff here in the readme and the rest in notes folder --
 
 >btw I made the notes myself , I have mentioned explicitly if I used ai in any particular line, the rest is handwritten based on whatever I understood with **no AI**  <img src="image.png" width="18">

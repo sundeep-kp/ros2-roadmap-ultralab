@@ -1,0 +1,34 @@
+If you wanna contribute to this repository:
+
+1. you may help with the formatting using # or ## for headings, > for notes, code between two sets of ```  above and below the code, and adequate spacing
+
+
+2. If you're from Husation team, feel free to mention and use parts of my repository as and where needed, just make sure to credit me atleast once in the page used (doesn't need to extravagant)
+
+3. Adding missing explanations
+Fixing mistakes or outdated information
+Improving tutorials or walkthroughs
+Suggesting better learning resources (for e.g i tend to use ros2 humble docs and geeks for geeks for ros2 and c++ concepts respectively)
+
+4. Improving navigation and organization by adding hyperlinks / wiki links like 
+```
+[alt-test](/path-to-file)
+```
+5. Help port this walkthrough to jazzy once Husarion docs is updated (Husarion team mentioned to me that soon the docs will be updated to ros2 jazzy)
+
+6. Add project suggestions under [Project_suggestions.md](/ros2-roadmap-ultralab/projects/Project_suggestions.md). 
+Format for project suggestions :
+
+    Tag(begineer/intermediate/advanced)
+
+    one-line introduction of what to make
+
+    point wise features of the project
+
+    
+
+
+
+
+7. Walkthroughs of projects in Project_suggestions.md . Make a new directory for each project inside /projects directory
+
