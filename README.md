@@ -1,6 +1,6 @@
 # **walkthrough**
 
->If you're too following this walkthrough, you may fork this branch, I'll add a link to your repository in the readme
+>If you're too following this walkthrough, you may fork this branch, I'll add a link to your repository in the readme. I would love if you would **star this repo.**
 
 >I have put the initial intro stuff here in the readme and the rest in notes folder --
 
@@ -183,6 +183,7 @@ Further--
 [2.Creating a subscriber](notes/2.Creating%20a%20subscriber.md)
 
 }
+
 
 
 

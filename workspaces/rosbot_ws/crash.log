@@ -1,0 +1,103 @@
+[INFO] [launch]: All log files can be found below /home/sundeep/.ros/log/2026-05-28-21-26-20-290184-sunking-10757
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: Spawning ROSbot
+	Namespace: ''
+	Initial pose: (-1.0, -2.0, 0.0, 0.0, 0.0, 0.0)
+[INFO] [ign gazebo-1]: process started with pid [10777]
+[INFO] [parameter_bridge-2]: process started with pid [10779]
+[INFO] [parameter_bridge-3]: process started with pid [10782]
+[INFO] [create-4]: process started with pid [10784]
+[INFO] [robot_state_publisher-5]: process started with pid [10786]
+[INFO] [joy_node-6]: process started with pid [10788]
+[INFO] [teleop_node-7]: process started with pid [10790]
+[INFO] [ekf_node-8]: process started with pid [10792]
+[INFO] [scan_to_scan_filter_chain-9]: process started with pid [10794]
+[INFO] [rviz2-10]: process started with pid [10796]
+[teleop_node-7] [0m[INFO] [1779983780.980020585] [TeleopTwistJoy]: Teleop enable button 4.[0m
+[teleop_node-7] [0m[INFO] [1779983780.980063384] [TeleopTwistJoy]: Turbo on button 5.[0m
+[teleop_node-7] [0m[INFO] [1779983780.980067503] [TeleopTwistJoy]: Linear axis x on 1 at scale 0.700000.[0m
+[teleop_node-7] [0m[INFO] [1779983780.980074733] [TeleopTwistJoy]: Turbo for linear axis x is scale 1.500000.[0m
+[teleop_node-7] [0m[INFO] [1779983780.980076645] [TeleopTwistJoy]: Linear axis y on 0 at scale 0.700000.[0m
+[teleop_node-7] [0m[INFO] [1779983780.980078293] [TeleopTwistJoy]: Turbo for linear axis y is scale 1.500000.[0m
+[teleop_node-7] [0m[INFO] [1779983780.980080194] [TeleopTwistJoy]: Angular axis yaw on 3 at scale 1.000000.[0m
+[teleop_node-7] [0m[INFO] [1779983780.980081842] [TeleopTwistJoy]: Turbo for angular axis yaw is scale 1.500000.[0m
+[scan_to_scan_filter_chain-9] [33m[WARN] [1779983780.984058483] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.[0m
+[robot_state_publisher-5] [0m[INFO] [1779983780.989328359] [robot_state_publisher]: got segment antenna_connector_link[0m
+[robot_state_publisher-5] [0m[INFO] [1779983780.989433103] [robot_state_publisher]: got segment antenna_link[0m
+[robot_state_publisher-5] [0m[INFO] [1779983780.989437972] [robot_state_publisher]: got segment base_link[0m
+[robot_state_publisher-5] [0m[INFO] [1779983780.989440158] [robot_state_publisher]: got segment body_link[0m
+[robot_state_publisher-5] [0m[INFO] [1779983780.989442101] [robot_state_publisher]: got segment cover_link[0m
+[robot_state_publisher-5] [0m[INFO] [1779983780.989444146] [robot_state_publisher]: got segment fl_wheel_link[0m
+[robot_state_publisher-5] [0m[INFO] [1779983780.989446363] [robot_state_publisher]: got segment fr_wheel_link[0m
+[robot_state_publisher-5] [0m[INFO] [1779983780.989448458] [robot_state_publisher]: got segment imu_link[0m
+[robot_state_publisher-5] [0m[INFO] [1779983780.989450563] [robot_state_publisher]: got segment rl_wheel_link[0m
+[robot_state_publisher-5] [0m[INFO] [1779983780.989452579] [robot_state_publisher]: got segment rr_wheel_link[0m
+[create-4] [0m[INFO] [1779983780.998940497] [ros_gz_sim]: Requesting list of world names.[0m
+[create-4] [0m[INFO] [1779983781.200994452] [ros_gz_sim]: Waiting messages on topic [robot_description].[0m
+[create-4] [0m[INFO] [1779983781.213066765] [ros_gz_sim]: Requested creation of entity.[0m
+[create-4] [0m[INFO] [1779983781.213119830] [ros_gz_sim]: OK creation of entity.[0m
+[rviz2-10] [0m[INFO] [1779983781.249944320] [rviz2]: Stereo is NOT SUPPORTED[0m
+[rviz2-10] [0m[INFO] [1779983781.250025848] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)[0m
+[rviz2-10] [0m[INFO] [1779983781.266528829] [rviz2]: Stereo is NOT SUPPORTED[0m
+[INFO] [create-4]: process has finished cleanly [pid 10784]
+[parameter_bridge-3] [0m[INFO] [1779983782.014485295] [rosbot_gz_bridge]: Creating GZ->ROS Bridge: [/cmd_vel (gz.msgs.Twist) -> /cmd_vel (geometry_msgs/msg/Twist)] (Lazy 0)[0m
+[parameter_bridge-2] [0m[INFO] [1779983782.017717109] [gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)[0m
+[scan_to_scan_filter_chain-9] [33m[WARN] [1779983782.046725354] [laser_filter]: diagnostic_updater: No HW_ID was set. This is probably a bug. Please report it. For devices that do not have a HW_ID, set this value to 'none'. This warning only occurs once all diagnostics are OK. It is okay to wait until the device is open before calling setHardwareID.[0m
+[ign gazebo-1] libEGL warning: egl: failed to create dri2 screen
+[ign gazebo-1] libEGL warning: egl: failed to create dri2 screen
+[INFO] [spawner-11]: process started with pid [11132]
+[spawner-11] [31m[FATAL] [1779983783.333212056] [spawner_mecanum_drive_controller]: [91mFailed loading controller [1mmecanum_drive_controller[0m[0m
+[91mFatal error: b'\x1b[31m[FATAL] [1779983783.333212056] [spawner_mecanum_drive_controller]: \x1b[91mFailed loading controller \x1b[1mmecanum_drive_controller\x1b[0m\x1b[0m\n'. Emitting shutdown...[0m
+[INFO] [spawner-11]: sending signal 'SIGINT' to process[spawner-11]
+[INFO] [rviz2-10]: sending signal 'SIGINT' to process[rviz2-10]
+[INFO] [scan_to_scan_filter_chain-9]: sending signal 'SIGINT' to process[scan_to_scan_filter_chain-9]
+[INFO] [ekf_node-8]: sending signal 'SIGINT' to process[ekf_node-8]
+[INFO] [teleop_node-7]: sending signal 'SIGINT' to process[teleop_node-7]
+[INFO] [joy_node-6]: sending signal 'SIGINT' to process[joy_node-6]
+[INFO] [robot_state_publisher-5]: sending signal 'SIGINT' to process[robot_state_publisher-5]
+[INFO] [parameter_bridge-3]: sending signal 'SIGINT' to process[parameter_bridge-3]
+[INFO] [parameter_bridge-2]: sending signal 'SIGINT' to process[parameter_bridge-2]
+[INFO] [ign gazebo-1]: sending signal 'SIGINT' to process[ign gazebo-1]
+[spawner-11] Traceback (most recent call last):
+[spawner-11]   File "/opt/ros/humble/lib/controller_manager/spawner", line 33, in <module>
+[spawner-11]     sys.exit(load_entry_point('controller-manager==2.54.0', 'console_scripts', 'spawner')())
+[spawner-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/controller_manager/spawner.py", line 373, in main
+[spawner-11]     rclpy.shutdown()
+[spawner-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 130, in shutdown
+[spawner-11]     _shutdown(context=context)
+[spawner-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+[spawner-11]     return context.shutdown()
+[spawner-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 103, in shutdown
+[spawner-11]     self._call_on_shutdown_callbacks()
+[spawner-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 92, in _call_on_shutdown_callbacks
+[spawner-11]     callback = weak_method()
+[spawner-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 111, in reset_executor
+[spawner-11]     __executor.shutdown()
+[spawner-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 264, in shutdown
+[spawner-11]     self._sigint_gc.destroy()
+[spawner-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/signals.py", line 66, in destroy
+[spawner-11]     _rclpy.unregister_sigint_guard_condition(self.handle)
+[spawner-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/guard_condition.py", line 36, in handle
+[spawner-11]     @property
+[spawner-11] KeyboardInterrupt
+[rviz2-10] [0m[INFO] [1779983783.340971409] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[scan_to_scan_filter_chain-9] [0m[INFO] [1779983783.342665740] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[ekf_node-8] [0m[INFO] [1779983783.344122386] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[teleop_node-7] [0m[INFO] [1779983783.345463918] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[joy_node-6] [0m[INFO] [1779983783.347188192] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[robot_state_publisher-5] [0m[INFO] [1779983783.349125229] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[parameter_bridge-3] [0m[INFO] [1779983783.351198701] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[parameter_bridge-2] [0m[INFO] [1779983783.354817389] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[ERROR] [spawner-11]: process has died [pid 11132, exit code -2, cmd '/opt/ros/humble/lib/controller_manager/spawner mecanum_drive_controller imu_broadcaster joint_state_broadcaster -c controller_manager --controller-manager-timeout 20 --ros-args -r __ns:=/ -p use_sim_time:=True -p use_sim_time:=True -p use_sim_time:=True -p use_sim_time:=True -p use_sim_time:=True -r /diagnostics:=diagnostics -r /tf:=tf -r /tf_static:=tf_static -r /diagnostics:=diagnostics -r /tf:=tf -r /tf_static:=tf_static -r /tf:=tf -r /tf_static:=tf_static'].
+[INFO] [teleop_node-7]: process has finished cleanly [pid 10790]
+[INFO] [parameter_bridge-3]: process has finished cleanly [pid 10782]
+[INFO] [ekf_node-8]: process has finished cleanly [pid 10792]
+[INFO] [robot_state_publisher-5]: process has finished cleanly [pid 10786]
+[INFO] [scan_to_scan_filter_chain-9]: process has finished cleanly [pid 10794]
+[INFO] [parameter_bridge-2]: process has finished cleanly [pid 10779]
+[INFO] [joy_node-6]: process has finished cleanly [pid 10788]
+[INFO] [rviz2-10]: process has finished cleanly [pid 10796]
+[ERROR] [ign gazebo-1]: process[ign gazebo-1] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+[INFO] [ign gazebo-1]: sending signal 'SIGTERM' to process[ign gazebo-1]
+[ERROR] [ign gazebo-1]: process has died [pid 10777, exit code -15, cmd 'ruby /usr/bin/ign gazebo --gui-config /home/sundeep/dev/ros2-roadmap-ultralab/ros2-roadmap-ultralab/workspaces/rosbot_ws/install/husarion_gz_worlds/share/husarion_gz_worlds/config/teleop.config -r -v 1 /home/sundeep/dev/ros2-roadmap-ultralab/ros2-roadmap-ultralab/workspaces/rosbot_ws/install/husarion_gz_worlds/share/husarion_gz_worlds/worlds/husarion_world.sdf --force-version 6'].
+[INFO] [launch]: process[ign gazebo-1] was required: shutting down launched system
