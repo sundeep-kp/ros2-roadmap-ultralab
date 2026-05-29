@@ -7,7 +7,7 @@ class MyNode : public rclcpp::Node //put the stuff in public of rclcpp::Node cla
                                     //  so we can directly use functions like Node()
 {
     public:
-        MyNode() : Node("my_node") { //parent constructor, does registeration of this node with the ROS2 graph under the name "my_node" and other behind the scenes stuff
+        MyNode() : Node("avg_brightness") { //parent constructor, does registeration of this node with the ROS2 graph under the name "my_node" and other behind the scenes stuff
                     // any function put just after "constructor :" runs before the code inside constructor, we put things like initilisation of variables e.g x(10) or base constructors e.g Node() here
             subscriber_ = create_subscription<sensor_msgs::msg::Image>( //we are using the image template of the create_subscription image which creates a subscription object and returns a shared pointer to the variable subscriber_, we have declared it below in private
                 "/image", //topic to subscribe to
@@ -33,7 +33,7 @@ class MyNode : public rclcpp::Node //put the stuff in public of rclcpp::Node cla
             }
 
             int avg = sum/image->data.size();
-            RCLCPP_INFO(get_logger(), avg);
+            RCLCPP_INFO(get_logger(),"Brightness: %d", avg);
         }
 
         

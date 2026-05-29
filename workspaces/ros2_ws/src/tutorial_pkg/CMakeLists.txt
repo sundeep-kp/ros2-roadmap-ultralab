@@ -28,10 +28,13 @@ if(BUILD_TESTING)
 endif()
 
 add_executable(my_first_node src/my_first_node.cpp)
+add_executable(avg_brightness src/avg_brightness.cpp)
 ament_target_dependencies(my_first_node rclcpp sensor_msgs)
+ament_target_dependencies(avg_brightness rclcpp sensor_msgs)
 
 install(TARGETS
   my_first_node
+  avg_brightness
   DESTINATION lib/${PROJECT_NAME}
 )
 
