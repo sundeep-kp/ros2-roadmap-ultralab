@@ -12,7 +12,7 @@
 <br/>
 <br/>
 
->This repository contains all the notes on everything i learnt, all the problems i faced, all the concepts i had to learn separately including but not limited to ***c++ and object oriented programming fundamentals, parts of os fundamentals (especially threads)***
+>This repository contains all the notes on everything i learnt using **Husarion docs** , all the problems i faced, all the fundamental concepts i had to learn *separately* including but not limited to *c++ and object oriented programming fundamentals;* ***basic parts of*** *os fundamentals (especially threads), image processing*
 
 **How to use this repository**--
 
@@ -140,7 +140,7 @@ src toh pata hi hai (*translation: I know what src is for*) , its for the main s
 
 >TO recap : now we have a workspace called ros2_ws(literally just a folder named ros2_ws that we manually created),
 
-> which has the source code of the packages(collection of nodes: "simplest program possible responsbile for controlling one particular thing usually") inside a folder called src .
+> which has the source code of the packages(collection of executables: "files that be run individually") inside a folder called src .
  
  >Now we created the package called tutorial_pkg inside of src. the package is a folder (called tutorial_pkg ) which has another folder called src for the actual source code of the node(s).
 
@@ -185,6 +185,14 @@ Further--
 [3.Creating a publisher](notes/3.Creating%20a%20publisher.md)
 }
 
+[Unit 3](https://husarion.com/tutorials/ros2-tutorials/3-creating-nodes-services/)
 
+{
+
+[1. Topics-Services-Actions](notes/4.%20Topics-Services-Actions.md)
+
+
+    
+}
 
 

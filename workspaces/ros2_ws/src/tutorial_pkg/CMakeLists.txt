@@ -14,6 +14,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -29,12 +30,16 @@ endif()
 
 add_executable(my_first_node src/my_first_node.cpp)
 add_executable(avg_brightness src/avg_brightness.cpp)
+add_executable(publisher src/publisher.cpp)
 ament_target_dependencies(my_first_node rclcpp sensor_msgs)
 ament_target_dependencies(avg_brightness rclcpp sensor_msgs)
+ament_target_dependencies(publisher rclcpp sensor_msgs std_msgs)
 
 install(TARGETS
   my_first_node
   avg_brightness
+  publisher
+
   DESTINATION lib/${PROJECT_NAME}
 )
 
