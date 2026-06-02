@@ -12,7 +12,7 @@
 <br/>
 <br/>
 
->This repository contains all the notes on everything i learnt using **Husarion docs** , all the problems i faced, all the fundamental concepts i had to learn *separately* including but not limited to *c++ and object oriented programming fundamentals;* ***basic parts of*** *os fundamentals (especially threads), image processing*
+>This repository contains all the notes on everything i learnt using **Husarion docs** , all the problems i faced, all the fundamental concepts i had to learn *separately* including but not limited to *c++(libraries like **chrono**) and object oriented programming fundamentals;* ***basic parts of*** *os fundamentals (especially threads, clocks and scheduling/**interrupts and callbacks**), image processing*
 
 **How to use this repository**--
 
@@ -191,6 +191,9 @@ Further--
 
 [1. Topics-Services-Actions](notes/4.%20Topics-Services-Actions.md)
 
+[2. Calling a Service](notes/5.Calling%20a%20service.md)
+
+[3. Creating a timer](notes/6.Creating%20a%20timer.md)
 
     
 }
