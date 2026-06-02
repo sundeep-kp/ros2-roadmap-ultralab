@@ -9,15 +9,15 @@ class MyNode : public rclcpp::Node{
         MyNode() : Node("my_node"){
 
             declare_parameter("timer_period_s", 5); //a function from rclcpp::Node class
-            auto timer_period_s = std::chrono::seconds(get_paramater("timer_period_s").as_int)
-            timer_ = create_wall_timer(5s, std::bind(&MyNode::timer_callback, this)); // its an rclcpp function, we use chrono only for the '5s' here
+            auto timer_period_s = std::chrono::seconds(get_parameter("timer_period_s").as_int()); //.as_int() to type convert to integer from parameter object
+            timer_ = create_wall_timer(timer_period_s, std::bind(&MyNode::timer_callback, this)); // its an rclcpp function, we use chrono only for the '5s' here
             
             RCLCPP_INFO(get_logger(), "Node Started!");
         }
 
     private:
         void timer_callback() {
-            RCLCPP_INFO(get_logger(),"Timer Activate, counting five seconds");
+            RCLCPP_INFO(get_logger(),"Timer Activate, counting %d seconds",get_parameter("timer_period_s").as_int());
         }
         rclcpp::TimerBase::SharedPtr timer_; //timer_base is a timer object type
     };
