@@ -1,5 +1,5 @@
 # **walkthrough**
-
+## Preface
 >If you're too following this walkthrough, you may fork this branch, I'll add a link to your repository in the readme. I would love if you would **star this repo.**
 
 >I have put the initial intro stuff here in the readme and the rest in notes folder --
@@ -9,10 +9,15 @@
 >also I am learning formatting for markdown files and github in general simulataneouly through a course here : - https://www.udemy.com/course/git-and-github-master-class/learn/lecture/52518833#overview
 
 <br/>
-<br/>
-<br/>
 
->This repository contains all the notes on everything i learnt using **Husarion docs** , all the problems i faced, all the fundamental concepts i had to learn *separately* including but not limited to *c++(libraries like **chrono**) and object oriented programming fundamentals;* ***basic parts of*** *os fundamentals (especially threads, clocks and scheduling/**interrupts and callbacks**), image processing*
+
+>This repository contains all the notes on everything i learnt using **Husarion docs** (*one of the best documents to learn ROS concepts*) , all the problems i faced, all the fundamental concepts i had to learn *separately* including but not limited to *c++(libraries like **chrono**) and object oriented programming fundamentals;* ***basic parts of*** *os fundamentals (especially threads, clocks and scheduling/**interrupts and callbacks**), image processing* and more
+
+> In the process I reached out to the creator of the ROS2 guide using ROSBOT_XL in husarion docs [Rafal Gorecki](https://github.com/rafal-gorecki) in a community issue: https://community.husarion.com/t/i-made-a-walkthrough-for-husarion-docs-rosbot-xl/2205/5
+
+>Discussions are open — ROS 2 doubts, suggestions, anything off-topic too. Keep it informal. https://github.com/sundeep-kp/ros2-roadmap-ultralab/discussions/1 
+
+>If you are someone who has completed a decent chunk of this repository, then I would really recommend contributing to it. Its a win-win situation for both of us. You get exposure, I have been repository refine and expanded. To learn how-- [CONTRIBUTING.md](/ros2-roadmap-ultralab/CONTRIBUTING.md)
 
 **How to use this repository**--
 
