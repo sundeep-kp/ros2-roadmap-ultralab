@@ -13,14 +13,19 @@
 
 >This repository contains all the notes on everything i learnt using **Husarion docs** (*one of the best documents to learn ROS concepts*) , all the problems i faced, all the fundamental concepts i had to learn *separately* including but not limited to *c++(libraries like **chrono**) and object oriented programming fundamentals;* ***basic parts of*** *os fundamentals (especially threads, clocks and scheduling/**interrupts and callbacks**), image processing* and more
 
-> In the process I reached out to the creator of the ROS2 guide using ROSBOT_XL in husarion docs [Rafal Gorecki](https://github.com/rafal-gorecki) in a community issue: https://community.husarion.com/t/i-made-a-walkthrough-for-husarion-docs-rosbot-xl/2205/5
+> In the process I reached out to the creator of the ROS2 guide using ROSBOT_XL in husarion docs [Rafał Górecki](https://github.com/rafal-gorecki) in the community forum: https://community.husarion.com/t/i-made-a-walkthrough-for-husarion-docs-rosbot-xl/2205/5
 
 >Discussions are open — ROS 2 doubts, suggestions, anything off-topic too. Keep it informal. https://github.com/sundeep-kp/ros2-roadmap-ultralab/discussions/1 
 
 >If you are someone who has completed a decent chunk of this repository, then I would really recommend contributing to it. Its a win-win situation for both of us. You get exposure, I have been repository refine and expanded. To learn how-- [CONTRIBUTING.md](/ros2-roadmap-ultralab/CONTRIBUTING.md)
 
 **How to use this repository**--
-
+ros2-roadmap-ultralab
+```
+├── notes // read this primarily in one window and husarion docs in another
+├── workspaces // all of the code mentioned in notes segmented into workspaces
+└── projects // currently has project suggestions. Will soon have walkthroughs as well
+```
 Follow the instructions in Husarion docs(use dark mode like a normal person-- top right corner) and further the resources in the projects sections and use the walkthroughs as reference when you get stuck. Do read the topic in the doc after you briefly complete it in husarion docs/ project resource , you might get some additional info about the topic. Try to write all code by hand, seeing the code briefly and writing everything that you remember. Also question EVERYTHING. 
 # [ROS 2 Introduction](https://husarion.com/tutorials/ros2-tutorials/1-ros2-introduction/)
 

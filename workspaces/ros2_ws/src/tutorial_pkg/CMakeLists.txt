@@ -15,6 +15,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -28,23 +29,32 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-add_executable(my_first_node src/my_first_node.cpp)
-add_executable(avg_brightness src/avg_brightness.cpp)
-add_executable(publisher src/publisher.cpp)
-add_executable(timer src/timer.cpp)
+add_executable(my_first_node src/1.my_first_node.cpp)
+add_executable(avg_brightness src/2.avg_brightness.cpp)
+add_executable(publisher src/3.publisher.cpp)
+add_executable(timer src/4.timer.cpp)
+add_executable(frequent_photo src/5.frequent_photo.cpp)
 
 ament_target_dependencies(my_first_node rclcpp sensor_msgs)
 ament_target_dependencies(avg_brightness rclcpp sensor_msgs)
 ament_target_dependencies(publisher rclcpp sensor_msgs std_msgs)
 ament_target_dependencies(timer rclcpp)
+ament_target_dependencies(frequent_photo rclcpp std_srvs)
 
 install(TARGETS
   my_first_node
   avg_brightness
   publisher
   timer
+  frequent_photo
 
   DESTINATION lib/${PROJECT_NAME}
+)
+
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}
+
 )
 
 ament_package()

@@ -1,0 +1,21 @@
+launch:
+  - node:
+      pkg: "tutorial_pkg"
+      exec: "frequent_photo"
+      name: "frequent_photo_node"
+      param: 
+        - name: "timer_period_s"
+          value: 2
+
+  - node:
+      pkg: "image_view"
+      exec: "image_saver"
+      name: "image_saver_node"
+      remap: 
+        - from: "/image"
+          to: "/oak/rgb/color"
+        - from: "/camera_info"
+          to: "/oak/stereo/camera_info"
+      param:
+        - name: "save_all_image"
+          value: false
