@@ -35,3 +35,10 @@ A robot with a fixed base.
 
 By then I realised that this course was really weird(not to disrespect him or anything I just found a more relevant course) + I couldn't find the book as pdf (hence problem with documenting)
 
+
+4. Are robots actually made up of rigid bodies in practice?
+
+No, we only consider most basic level a robot consists of rigid bodies
+connected by joints, with the joints driven by actuators. In practice the links
+may not be completely rigid, and the joints may be affected by factors such as
+elasticity, backlash, friction, and hysteresis(the phenomenon where the state of a system depends not only on its current input but also on its past history)

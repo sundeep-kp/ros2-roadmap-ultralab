@@ -1,5 +1,5 @@
 [Sundeep:]
-For the entirety of this section, I'll be referring to this book by Dr. Kevin M. Lynch and Dr. Frank C. Park-- 
+For the entirety of this section, I'll be referring to this book by Dr. Kevin M. Lynch and Dr. Frank C. Park with minor changes from my side , apart from that I  explicitly mention if I document my interpretion of a topic as well-- 
 
 [Modern Robotics: Mechanics, Planning and Control](https://hades.mech.northwestern.edu/images/7/7f/MR.pdf)
 
