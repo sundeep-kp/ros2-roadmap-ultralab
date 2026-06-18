@@ -29,6 +29,8 @@ ros2-roadmap-ultralab
 └── projects // currently has project suggestions. Will soon have walkthroughs as well
 ```
 Follow the instructions in Husarion docs(use dark mode like a normal person-- top right corner) and further the resources in the projects sections and use the walkthroughs as reference when you get stuck. Do read the topic in the doc after you briefly complete it in husarion docs/ project resource , you might get some additional info about the topic. Try to write all code by hand, seeing the code briefly and writing everything that you remember. Also question EVERYTHING. 
+
+>At the end of the file, You'll see the table of contents being updated regularly
 # [ROS 2 Introduction](https://husarion.com/tutorials/ros2-tutorials/1-ros2-introduction/)
 
 *ROS 2 is a middleware based on a strongly-typed, anonymous publish/subscribe mechanism that allows for message passing between different processes* ~ros2 humble docs
