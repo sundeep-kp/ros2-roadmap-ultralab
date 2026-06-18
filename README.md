@@ -11,7 +11,9 @@
 <br/>
 
 
->This repository contains all the notes on everything i learnt using **Husarion docs** (*one of the best documents to learn ROS concepts*) , all the problems i faced, all the fundamental concepts i had to learn *separately* including but not limited to *c++(libraries like **chrono**) and object oriented programming fundamentals;* ***basic parts of*** *os fundamentals (especially threads, clocks and scheduling/**interrupts and callbacks**), image processing* and more
+>This repository contains all the notes on everything i learnt using **Husarion docs** (*one of the best documents to learn ROS concepts*) , all the problems i faced, all the fundamental concepts i had to learn *separately* including but not limited to *c++(libraries like **chrono**) and object oriented programming fundamentals;* ***basic parts of*** *os fundamentals (especially threads, clocks and scheduling/**interrupts and callbacks**), image processing* and more. 
+
+>Right now I am in the process of adding further robotics fundamentals especially physics and maths for robotics.
 
 > In the process I reached out to the creator of the ROS2 guide using ROSBOT_XL in husarion docs [Rafał Górecki](https://github.com/rafal-gorecki) in the community forum: https://community.husarion.com/t/i-made-a-walkthrough-for-husarion-docs-rosbot-xl/2205/5
 
@@ -210,5 +212,27 @@ Further--
 }
 
 
+(optional but recommended)--
 
+[common-functions-for-ros:](notes/8.Common-functions)
 
+Intro to fundamentals of robotics:{
+
+[1.Fundamentals](/ros2-roadmap-ultralab/notes/9.%20Intro%20to%20technical%20aspects%20of%20robotics/1.Fundamentals.md)
+
+[2. Kinematics of Robots: Position Analysis](/ros2-roadmap-ultralab/notes/9.%20Intro%20to%20technical%20aspects%20of%20robotics/2.%20Kinematics%20of%20Robots:%20Position%20Analysis.md)
+
+...more to be added soon
+
+}
+
+Mechanics, Planning and Control:{
+
+[1.Some important terms](/ros2-roadmap-ultralab/notes/10.%20Mechanics,%20Planning%20and%20Control/1.Some%20important%20terms.md)
+
+[2.Configuration Space](<notes/10. Mechanics, Planning and Control/2.Configuration Space.md>)
+
+[3.Rigid Body Motions](<notes/10. Mechanics, Planning and Control/3.Rigid Body Motions.md>)
+
+...more to be added soon
+}
