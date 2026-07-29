@@ -13,7 +13,7 @@
 1. What is a robot? (possible interview question)
 
 formal definition-- 
-![alt text](image-6.png)
+![alt text](assets/image-6.png)
 
 Note: A cnc machine is not a robot (lower level of reprogrammability)
 
@@ -29,7 +29,7 @@ In robotics , we use the fundamentals of Physics, mathematics, Mechanical engg(K
 3. What is a Manipulator?
 
 A robot with a fixed base.
-![alt text](image-7.png)
+![alt text](assets/image-7.png)
 
 ---
 
